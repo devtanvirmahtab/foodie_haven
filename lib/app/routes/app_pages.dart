@@ -1,5 +1,13 @@
 import 'package:get/get.dart';
 
+import '../modules/auth/forget/forget_binding.dart';
+import '../modules/auth/forget/forget_view.dart';
+import '../modules/auth/login/login_binding.dart';
+import '../modules/auth/login/login_view.dart';
+import '../modules/auth/otp_verify/otp_verify_binding.dart';
+import '../modules/auth/otp_verify/otp_verify_view.dart';
+import '../modules/auth/sign_up/sign_up_binding.dart';
+import '../modules/auth/sign_up/sign_up_view.dart';
 import '../modules/bottom_nav/home/home_binding.dart';
 import '../modules/bottom_nav/home/home_view.dart';
 import '../modules/bottom_nav/main_nav/main_nav_binding.dart';
@@ -43,6 +51,26 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGN_UP,
+      page: () => const SignUpView(),
+      binding: SignUpBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGET,
+      page: () => const ForgetView(),
+      binding: ForgetBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTP_VERIFY,
+      page: () => const OtpVerifyView(),
+      binding: OtpVerifyBinding(),
     ),
   ];
 }
